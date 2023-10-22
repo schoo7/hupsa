@@ -65,8 +65,6 @@ data=MapQuery(
   ),
   reduction.model = "umap"
 )
-notch=list(Notch=c("CD44","DTX1","EPHB3","HES1","HES4","HES5","HES7","HEY1","HEY2","HEYL","MYC","NFKB2","NOX1","NRARP","PBX1","PIN1","PLXND1","SOX9"))
-data=AddModuleScore_UCell(data, features = notch,maxRank = 3000)
 saveRDS(data,"Projected_C42B.rds")
 # start to visulize
 Idents(data)=data$predicted.cell_type3
